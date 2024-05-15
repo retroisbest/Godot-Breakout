@@ -1,5 +1,5 @@
 extends RigidBody2D
-
+class_name Wall
 signal ball_collison
 
 # Called when the node enters the scene tree for the first time.

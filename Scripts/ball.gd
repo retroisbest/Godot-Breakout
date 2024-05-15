@@ -45,7 +45,8 @@ func _physics_process(delta):
 			$Brick_Hit.play()
 	else:
 		velocity = velocity.bounce(collision.get_normal())
-		
+		if collider is Wall:
+			$Wall_Hit.play()
 	
 func start_ball():
 	position = start_position
