@@ -41,8 +41,8 @@ func _physics_process(delta):
 		ball_collision(collider)
 		if (collider is Paddle):
 			$Paddle_Bounce.play()
-		if (collider is Brick):
-			$Brick_Hit.play()
+		#if (collider is Brick): #commented out because it would play even if the brick had more than 1 life - moved brick effects to brick.gd
+			#$Brick_Hit.play()
 	else:
 		velocity = velocity.bounce(collision.get_normal())
 	if (collider is Wall):

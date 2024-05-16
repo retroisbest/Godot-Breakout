@@ -35,8 +35,12 @@ func set_level(new_level: int):
 func decrease_level():
 	if level > 1:
 		set_level(level - 1)
+		$Brick_Hit.play()
 	else: 
+		print("Brick Destroyed!")
+		$Brick_Destroyed.play()
 		fade_out()
+		
 		
 		
 func fade_out():

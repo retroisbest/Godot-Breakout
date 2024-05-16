@@ -3,7 +3,8 @@ extends Node
 var current_level = 1
 
 var level_1 = [
-	[1,1,1,1,1]
+	#[1,1,1,1,1]
+	[1]
 ]
 
 var level_2 = [

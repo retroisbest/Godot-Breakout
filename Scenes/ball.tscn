@@ -1,9 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://ddnr0s0sc1sx4"]
+[gd_scene load_steps=6 format=3 uid="uid://ddnr0s0sc1sx4"]
 
 [ext_resource type="Script" path="res://Scripts/ball.gd" id="1_4j7fr"]
 [ext_resource type="Texture2D" uid="uid://xwgc234jxino" path="res://Assets/Graphics/ballBlue.png" id="2_wtdqs"]
 [ext_resource type="AudioStream" uid="uid://cf2p8vdl3h0xn" path="res://Assets/sound/ball_bounce.wav" id="3_lmbc4"]
-[ext_resource type="AudioStream" uid="uid://h25ta8vne1ae" path="res://Assets/sound/Brick_Hit.wav" id="4_uxlrp"]
 [ext_resource type="AudioStream" uid="uid://b8u8afsdn0k2d" path="res://Assets/sound/Wall_Bounce.wav" id="5_n5fwx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_mt3eq"]
@@ -24,9 +23,6 @@ shape = SubResource("CircleShape2D_mt3eq")
 
 [node name="Paddle_Bounce" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("3_lmbc4")
-
-[node name="Brick_Hit" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("4_uxlrp")
 
 [node name="Wall_Hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_n5fwx")

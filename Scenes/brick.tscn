@@ -1,7 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bbav61wfuxynt"]
+[gd_scene load_steps=6 format=3 uid="uid://bbav61wfuxynt"]
 
 [ext_resource type="Script" path="res://Scripts/brick.gd" id="1_jm3l2"]
 [ext_resource type="Texture2D" uid="uid://d1wr2grsqohu8" path="res://Assets/Graphics/element_blue_rectangle_glossy.png" id="2_twglm"]
+[ext_resource type="AudioStream" uid="uid://h25ta8vne1ae" path="res://Assets/sound/Brick_Hit.wav" id="3_nj13x"]
+[ext_resource type="AudioStream" uid="uid://c45tidn6patlt" path="res://Assets/sound/Brick_Destroyed.wav" id="3_oyui1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1cj5w"]
 size = Vector2(100, 25)
@@ -20,3 +22,9 @@ texture = ExtResource("2_twglm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_1cj5w")
+
+[node name="Brick_Hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_nj13x")
+
+[node name="Brick_Destroyed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_oyui1")
