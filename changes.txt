@@ -1,0 +1,39 @@
+v1.3
+title music changed to TitleMusic.mp3 (https://github.com/OpenSourceMusic/Pause-Menu-Track-1)
+issues with no sound when ball hit walls
+created wall.gd
+wall.tscn class_name Wall added to wall.gd 
+Attached wall.gd script to wall.tscn
+ball.gd changed script to below
+func _physics_process(delta):
+	var collision = move_and_collide(velocity * ball_speed * delta)
+	if (!collision):
+		return
+		
+	var collider = collision.get_collider()
+	print(collider) #debug only prints the object it had collided with
+	if collider is Brick:
+		collider.decrease_level()
+	if (collider is Brick or collider is Paddle):
+		ball_collision(collider)
+		if (collider is Paddle):
+			$Paddle_Bounce.play()
+		if (collider is Brick):
+			$Brick_Hit.play()
+	else:
+		velocity = velocity.bounce(collision.get_normal())
+	if collider is Wall:
+		$Wall_Hit.play()
+
+v1.2
+Sound on title screen
+animate title screen
+all new paddle and brick graphics downloaded from kenny nl assets website
+ball bounce sound on paddle
+brick hit sound when ball hits
+gave left, right and upper wall texture (needs improving)
+v1.1
+simple title screen
+ball speed increased
+v1.0
+simple breakout clone created

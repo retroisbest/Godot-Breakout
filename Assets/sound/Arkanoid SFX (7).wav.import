@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dx8ayfjvwlqnl"
+path="res://.godot/imported/Arkanoid SFX (7).wav-e56d9b1966962b2e541df66420ca4bfc.sample"
+
+[deps]
+
+source_file="res://Assets/sound/Arkanoid SFX (7).wav"
+dest_files=["res://.godot/imported/Arkanoid SFX (7).wav-e56d9b1966962b2e541df66420ca4bfc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

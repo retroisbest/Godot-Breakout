@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cb8665u5fkfoo"]
+[gd_scene load_steps=6 format=3 uid="uid://cb8665u5fkfoo"]
 
-[ext_resource type="Script" path="res://Scenes/titlescreen.gd" id="1_58xy5"]
+[ext_resource type="Script" path="res://Scripts/titlescreen.gd" id="1_wkik8"]
 [ext_resource type="FontFile" uid="uid://b4pqfbvte11k6" path="res://Assets/VT323-Regular.ttf" id="2_4d07r"]
+[ext_resource type="AudioStream" uid="uid://qbjmt3t4bfkq" path="res://Assets/sound/TitleMusic.mp3" id="3_n12ug"]
 
 [sub_resource type="Gradient" id="Gradient_lbl26"]
 offsets = PackedFloat32Array(0, 0.551948, 1)
@@ -17,7 +18,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_58xy5")
+script = ExtResource("1_wkik8")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -127,6 +128,10 @@ offset_bottom = 474.0
 theme_override_fonts/font = ExtResource("2_4d07r")
 theme_override_font_sizes/font_size = 64
 text = "START"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_n12ug")
+autoplay = true
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 0
