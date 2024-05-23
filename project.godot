@@ -18,6 +18,7 @@ config/icon="res://Assets/icon.svg"
 [autoload]
 
 LevelDefinitions="*res://Scripts/level_definitions.gd"
+SettingsManager="*res://Scripts/SettingsManager.gd"
 
 [display]
 
